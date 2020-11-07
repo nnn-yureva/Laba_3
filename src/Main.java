@@ -13,8 +13,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> arrayList = new ArrayList<Integer>();
-        LinkedList<Integer> list = new LinkedList<Integer>();
+        ArrayList<Integer> array = new ArrayList<Integer>();
+        LinkedList<Integer> linked = new LinkedList<Integer>();
 
         LocalTime start;
         LocalTime finish;
@@ -24,13 +24,13 @@ public class Main {
         System.out.println("add: ");
         start = LocalTime.now();
         for (int i = 0; i < N; i++)
-            arrayList.add(i^2);
+            array.add(i^2);
         finish = LocalTime.now();
         System.out.println("ArrayList: " + (finish.getSecond() - start.getSecond()) + "." + (finish.getNano() - start.getNano()) );
 
         start = LocalTime.now();
         for (int i = 0; i < N; i++)
-            list.add(i^2);
+            linked.add(i^2);
         finish = LocalTime.now();
         System.out.println("LinkedList: " + (finish.getSecond() - start.getSecond()) + "." + (finish.getNano() - start.getNano())+ "\n" );
 
@@ -38,13 +38,13 @@ public class Main {
         System.out.println("get: ");
         start = LocalTime.now();
         for (int i = 0; i < N; i++)
-            arrayList.get(i);
+            array.get(i);
         finish = LocalTime.now();
         System.out.println("ArrayList: " + (finish.getSecond() - start.getSecond()) + "." + (finish.getNano() - start.getNano()) );
 
         start = LocalTime.now();
         for (int i = 0; i < N; i++)
-            list.get(i);
+            linked.get(i);
         finish = LocalTime.now();
         System.out.println("LinkedList: " + (finish.getSecond() - start.getSecond()) + "." + (finish.getNano() - start.getNano()) + "\n");
 
@@ -52,13 +52,13 @@ public class Main {
         System.out.println("remove: ");
         start = LocalTime.now();
         for (int i = 0; i < N; i++)
-        arrayList.remove(0);
+        array.remove(0);
         finish = LocalTime.now();
         System.out.println("ArrayList: " + (finish.getSecond() - start.getSecond()) + "." + (finish.getNano() - start.getNano()) );
 
         start = LocalTime.now();
         for (int i = 0; i < N; i++)
-        list.remove(0);
+        linked.remove(0);
         finish = LocalTime.now();
         System.out.println("LinkedList: " + (finish.getSecond() - start.getSecond()) + "." + (finish.getNano() - start.getNano()) );
     }
